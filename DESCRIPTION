@@ -1,20 +1,23 @@
-Package: getintrinio
-Type: Package
-Title: getintrinio (http://github.com/andrewjamescarpenter/get_intrinio)
-Description: Describe the package.
-Version: 0.1.0
-Author: Andrew Carpenter <acarpenter@intrinio.com>
-Maintainer: Andrew Carpenter <acarpenter@intrinio.com>
-Authors@R: c(person("Andrew", "Carpenter",
-    email = "acarpenter@intrinio.com", role = c("aut", "cre")))
-Depends:
-    R (>= 3.0.1)
-License: MIT
-LazyData: true
+Package: IntrinioStockAPI
+Title: Wrapper for the Intrinio Financial Markets Data and Stock API
+Version: 0.0.1
+Maintainer: Intrinio <support@intrinio.com>
+Description: Download financial data from the Intrinio Stock API (<https://intrinio.com/>).
+    Intrinio offers a RESTful API which provides financial markets data, 
+    including stock prices, quotes, technical indicators, and company fundamentals. 
+    Complete documentation for the API is available here: 
+    <https://intrinio.com/documentation/api/>. To get access to this API,
+    the user needs to create an account: <https://intrinio.com/>.
+Author: Intrinio
+Depends: R (>= 3.0.1)
 Imports:
     stringr
 Suggests:
     knitr,
     microbenchmark,
     testthat
-Roxygen: list(wrap = FALSE)
+License: MIT
+Encoding: UTF-8
+LazyData: true
+URL: https://github.com/intrinio/r-sdk
+RoxygenNote: 6.0.1
