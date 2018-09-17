@@ -13,33 +13,20 @@ To install the Github version, use `devtools::install_github("/intrinio/r-sdk")`
 
 ## Usage
 
-### Step One: Set API Key
+### Get Your Intrinio API Credentials
 
-First, set your API key (Note: this is a 100% fake API key. Get key [here](https://www.alphavantage.co/support/#api-key) if you don't already have one):
+First, create an account for the [Intrinio Stock API](https://intrinio.com/)
+
+### Fetch Stock Price Data
+
+For example, let's grab daily prices for the Apple Security
 
 ```{r}
-setAPIKey("ABCD")
+apple_prices <- intrinio_fetch("api.intrinio.com/prices?ticker=AAPL", "[YOUR API USERNAME]", "[YOUR API PASSWORD]")
 ```
 
-### Step Two: Download data.
-
-Here is how to get daily time series loaded directly into an `xts` object:
+The function returns a data frame which can be plotted as follows:
 
 ```{r}
-amzn <- fetchSeries(function_nm = "time_series_daily", symbol = "amzn", outputsize = "full", datatype = "json")
-```
 
-The function returns a list with two elements - the `xts` object that is interpreted from the response, and the response from the `httr` package request. Now the data can be plotted, analyzed, manipulated into returns, etc.:
-
-```{r}
-head(amzn$xts_object)
-plot(amzn$xts_object[ ,1])
-amzn_returns <- diff(log(amzn$xts_object[ ,1]))
-```
-
-Similarly, the other Alpha Vantage data offerings are available using the same function:
-
-```{r}
-amzn_sma <- fetchSeries(function_nm = "sma", symbol = "amzn", interval = "daily", time_period = 60, series_type = "close")
-amzn_bbands <- fetchSeries(function_nm = "bbands", symbol = "amzn", interval = "daily", time_period = 60, series_type = "close")
 ```

@@ -15,10 +15,10 @@
 #' @param api_username Your API username, available at https://intrinio.com/account
 #' @return A data frame
 #' @examples
-#' apple_prices <- get_intrinio_data("api.intrinio.com/prices?ticker=AAPL", "[YOUR API USERNAME]", "[YOUR API PASSWORD]")
+#' apple_prices <- intrinio_fetch("api.intrinio.com/prices?ticker=AAPL", "[YOUR API USERNAME]", "[YOUR API PASSWORD]")
 #' @export
 
-fetch <- function(url, api_username, api_password) {
+intrinio_fetch <- function(url, api_username, api_password) {
   
   #Require the package so you can use it make sure to install the httr package if you haven't
   require("httr")
