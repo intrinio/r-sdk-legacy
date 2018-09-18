@@ -58,6 +58,6 @@ intrinio_fetch <- function(url, api_username, api_password) {
     }
   }
 
-  fetch <- get_data_df
+  intrinio_fetch <- get_data_df
   
 }
