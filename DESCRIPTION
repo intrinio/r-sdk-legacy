@@ -11,9 +11,9 @@ Description: Download financial data from the free Intrinio Stock API (<https://
 Author: Intrinio
 Depends: R (>= 3.0.1)
 Imports:
-    stringr
-    httr
-    jsonlite
+    stringr,
+    httr,
+    jsonlite,
     gtools
 Suggests:
     knitr,
