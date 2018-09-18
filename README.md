@@ -9,7 +9,7 @@
 This package can be installed via CRAN `install.packages("IntrinioStockAPI")`.
 
 
-To install the Github version, use `devtools::install_github("/intrinio/r-sdk")`.
+To install the Github version, use `devtools::install_github("intrinio/r-sdk")`.
 
 ## Usage
 

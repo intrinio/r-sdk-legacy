@@ -1,6 +1,6 @@
 #' Describe the package.
 #'
-#' @name getintrinio
+#' @name intrinio_stock_api
 #' @import stringr
 #' @docType package
 NULL
