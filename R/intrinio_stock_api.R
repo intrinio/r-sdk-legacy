@@ -20,20 +20,20 @@
 
 intrinio_fetch <- function(url, api_username, api_password) {
   
-  #Require the package so you can use it make sure to install the httr package if you haven't
   require("httr")
   
-  #Require the package so you can use it- install the package if you haven't
   require("jsonlite")
+  
+  require("gtools")
     
   get_data <- GET(url, authenticate(api_username, api_password, type = "basic"))
   
-  #The content function parses the API response to text.
+  # The content function parses the API response to text.
   get_data_text <- content(get_data, "text", encoding = "UTF-8")
   
   get_data_json <- fromJSON(get_data_text, flatten = TRUE)
   
-  #Converting the data to a dataframe
+  # Converting the data to a dataframe
   get_data_df <- as.data.frame(get_data_json)
   
   pages <- get_data_json$total_pages
@@ -52,8 +52,8 @@ intrinio_fetch <- function(url, api_username, api_password) {
       
       get_data_df_page <- as.data.frame(get_data_json_page)
       
-      #Now we add the data to the existing dataframe and repeat
-      get_data_df <- rbind(get_data_df, get_data_df_page)
+      # Now we add the data to the existing dataframe and repeat
+      get_data_df <- smartbind(get_data_df, get_data_df_page)
       
     }
   }
