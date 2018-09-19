@@ -2,7 +2,7 @@
 
 ## Introduction
 
-[Intrinio](https://intrinio.com/) offers a free API to access real time and historical stock market prices and data. 
+[Intrinio](https://intrinio.com/) offers a free API to access near real time and historical stock market prices and data. 
 
 This package wraps the Intrinio API for R so that the response data is easy to use.
 
