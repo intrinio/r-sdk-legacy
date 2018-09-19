@@ -18,6 +18,12 @@ To install the Github version, use `devtools::install_github("intrinio/r-sdk")`.
 
 First, create an account for the [Intrinio Stock API](https://intrinio.com/)
 
+### Load the Library
+
+```{r}
+library(IntrinioStockAPI)
+```
+
 ### Fetch Stock Price Data
 
 For example, let's grab daily prices for the Apple Security...

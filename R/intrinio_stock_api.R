@@ -1,31 +1,20 @@
-#This function will take an Intrinio API URL, API password, and API username as inputs and return a dataframe with the requested data.
-
-#Here is an example of how to use it- remember to enter your own API username and password from intrinio.com/account:
-
-#apple_prices <- get_intrinio_data("api.intrinio.com/prices?ticker=AAPL", "a543b029ec930ab0c7add95bfa1ea3ac", "ad905ac37ffc277c8184d90c6e2f36c4")
-
-
-#' Fetch time series data
+#' Fetch Intrinio Data
 #' 
-#' This is the main function that pulls data directly from Alpha Vantage into a convenient \code{xts} object. This is a general function
-#' that reflects exactly the documentation listed \href{https://www.alphavantage.co/documentation/}{online}.
+#' This function takes an Intrinio API endpoint URL, API username, and API password as inputs and return a dataframe with the requested data.
+#' Remember to enter your own API username and password from https://intrinio.com/account:
 #' 
-#' @param url The Intrinio API URL to call i.e. api.intrinio.com/prices?ticker=AAPL
+#' @param url The Intrinio API Endpoint URL to call i.e. api.intrinio.com/prices?ticker=AAPL
 #' @param api_username Your API username, available at https://intrinio.com/account
-#' @param api_username Your API username, available at https://intrinio.com/account
+#' @param api_password Your API password, available at https://intrinio.com/account
 #' @return A data frame
 #' @examples
-#' apple_prices <- intrinio_fetch("api.intrinio.com/prices?ticker=AAPL", "[YOUR API USERNAME]", "[YOUR API PASSWORD]")
+#' api_username <- "[YOUR API USERNAME]"
+#' api_password <- "[YOUR API PASSWORD]"
+#' aapl_prices <- intrinio_fetch("api.intrinio.com/prices?ticker=AAPL", api_username, api_password)
 #' @export
 
 intrinio_fetch <- function(url, api_username, api_password) {
-  
-  require("httr")
-  
-  require("jsonlite")
-  
-  require("gtools")
-    
+
   get_data <- GET(url, authenticate(api_username, api_password, type = "basic"))
   
   # The content function parses the API response to text.
