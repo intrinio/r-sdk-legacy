@@ -55,4 +55,4 @@ plot(tim_cook_comp$data.total_summary/1000)
 
 ### Take Your Analysis Further
 
-Full documentation for the Intrinio Financial Data API is available at (https://intrinio.com/documentation/api)
+Full documentation for the Intrinio Financial Data API is available at https://intrinio.com/documentation/api
