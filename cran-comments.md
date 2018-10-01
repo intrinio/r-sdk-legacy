@@ -1,5 +1,5 @@
 ## Release Summary
-This is the first release of `IntrinioStockAPI` for CRAN review. 
+This is the first release of 'IntrinioStockAPI' for CRAN review. 
 
 ## Test environments
 * local macOS High Sierra install, R 3.5.1

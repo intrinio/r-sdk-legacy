@@ -1,12 +1,12 @@
 Package: IntrinioStockAPI
-Title: Wrapper for the Intrinio Financial Markets Data and Stock API
+Title: Wrapper for the 'Intrinio Stock API'
 Version: 0.0.1
-Maintainer: Intrinio <kmiller@intrinio.com>
-Description: Download financial data from the free Intrinio Stock API (<https://intrinio.com/>).
-    Intrinio offers a REST API which provides financial data 
-    including stock prices, quotes, technical indicators, company fundamentals, and more. 
-    Complete documentation for the Intrinio API is available here: 
-    <https://intrinio.com/documentation/api/>. To access the Intrinio API,
+Maintainer: Kenneth Miller <kmiller@intrinio.com>
+Description: Download financial data from the free 'Intrinio Stock API' (<https://intrinio.com/>).
+    'Intrinio' offers a REST API which provides financial markets data 
+    including intra-day stock prices, historical stock prices, technical indicators, company fundamentals, and more. 
+    Complete documentation for the 'Intrinio Stock API' is available here: 
+    <https://intrinio.com/documentation/api/>. To access the 'Intrinio Stock API',
     simply create a free account <https://intrinio.com/>.
 Author: Intrinio
 Depends: R (>= 3.0.1)
